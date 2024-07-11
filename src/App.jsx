@@ -1,10 +1,9 @@
-import { useState } from "react";
-import "./App.css";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Home from "./views/Home";
-import { Route, Routes } from "react-router-dom";
 import Charecters from "./views/Charecters";
 import CharactersDetails from "./views/CharactersDetails";
+import "./App.css";
 
 function App() {
   return (

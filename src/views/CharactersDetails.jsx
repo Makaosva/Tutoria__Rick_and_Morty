@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import Loader from "../Components/Loader";
@@ -23,16 +23,19 @@ function CharactersDetails() {
   }
 
   return (
-    <Container>
+    <Container className="mt-5">
       <Card>
-        <Row>
-          <Col>
-            <Card.Img src={character.image} />
+        <Row noGutters>
+          <Col md={4}>
+            <Card.Img className="character-img" src={character.image} />
           </Col>
-          <Col>
+          <Col md={8}>
             <Card.Body>
               <Card.Title>{character.name}</Card.Title>
-              <Card.Text>{character.species}</Card.Text>
+              <Card.Text>Status: {character.status}</Card.Text>
+              <Card.Text>Species: {character.species}</Card.Text>
+              <Card.Text>Gender: {character.gender}</Card.Text>
+              <Card.Text>Origin: {character.origin.name}</Card.Text>
             </Card.Body>
           </Col>
         </Row>
